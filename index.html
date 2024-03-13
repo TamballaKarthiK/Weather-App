@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the page -->
+    <title>Weather App</title>
+    
+    <!-- Link to external CSS styles -->
+    <link rel="stylesheet" href="weather.css">
+    
+    <!-- Link to Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+</head>
+<body>
+    <!-- Form for user input -->
+    <h1>Weather ForecastHub</h1>
+    <div class="form">
+        <div class="input-div">
+            City*: <input type="text" class="city">
+            State: <input type="text" class="state">
+            Country: <input type="text" class="country">
+        </div>
+        <button>Submit</button>
+    </div>
+    <blink id="error"></blink>
+    <!-- Loading spinner (initially hidden) -->
+    <div class="spinner" style="display:none;"></div>
+    
+    <!-- Container for weather data -->
+    <div class="weather-data"></div>
+
+    <!-- Canvas element for the chart -->
+    <canvas id="temperatureChart"></canvas>
+
+    <!-- Heading for weather information -->
+    <h3 class="heading"></h3>
+
+    <!-- Container for weather forecast -->
+    <div class="weather-forecast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link to external JavaScript file -->
+    <script src="weather.js"></script>
+</body>
+</html>
