@@ -1,3 +1,6 @@
+import openWeatherApiKey from "./apiKey";
+const apiKey=openWeatherApiKey;
+
 // Function to determine whether it is day or night based on sunrise and sunset timestamps
 function isDayOrNight(sunriseTimestamp, sunsetTimestamp) {
     let currentTimestamp = Math.floor(Date.now() / 1000);
@@ -239,7 +242,6 @@ document.querySelector("button").addEventListener("click", async () => {
     const country = document.querySelector(".country").value;
     const spinner = document.querySelector(".spinner");
     spinner.style.display = "block";
-    const apiKey = '3a0f7aface03d972cc79661a4a4bf044';
     document.querySelector(".weather-data").innerHTML = "";
     document.querySelector(".weather-data").style.backgroundColor = "";
     document.querySelector(".heading").innerText = "";
