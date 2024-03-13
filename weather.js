@@ -1,4 +1,4 @@
-import openWeatherApiKey from "./apiKey";
+import openWeatherApiKey from "./apikey.js";
 const apiKey=openWeatherApiKey;
 
 // Function to determine whether it is day or night based on sunrise and sunset timestamps
