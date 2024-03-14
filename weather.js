@@ -193,6 +193,8 @@ async function getWeatherInfo(url, spinner) {
             console.error('Failed to fetch data. Status:', response.status);
             document.querySelector(".weather-data").innerHTML = "";
             document.querySelector(".weather-data").style.backgroundColor = "";
+            let e = document.querySelector("#error");
+            e.innerText = "Please enter a valid location.";
         }
     } catch (error) {
         console.log(error);
