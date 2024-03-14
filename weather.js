@@ -187,6 +187,8 @@ async function getWeatherInfo(url, spinner) {
             document.querySelector(".weather-data").innerHTML = "";
             document.querySelector(".weather-data").style.backgroundColor = "";
             displayCurrentWeather(data);
+            // Clearing Error Messages
+            document.querySelector("#error").innerText = "";
         } else {
             console.error('Failed to fetch data. Status:', response.status);
             document.querySelector(".weather-data").innerHTML = "";
@@ -215,6 +217,8 @@ async function getFutureForecast(url) {
             document.querySelector(".heading").innerText = "";
             document.querySelector(".weather-forecast").style.backgroundColor = "";
             displaySevenDayForecast(data.list);
+            // Clearing Error Messages
+            document.querySelector("#error").innerText = "";
         } else {
             console.error('Failed to fetch data. Status:', response.status);
             const ctx = document.getElementById('temperatureChart').getContext('2d');
